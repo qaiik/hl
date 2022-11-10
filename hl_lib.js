@@ -73,7 +73,10 @@ const _gd_efieldsg = () => {
 }
 
 function _gd_ddisplay() {
+  let ss = ""
+  console.log(Date())
   Object.entries(gd.data).forEach(e => {
-    console.log(e[0] + ":", e[1])
-  }
+    ss += e[0] + ":" + " " + e[1] + "\n"
+  })
+  console.log(ss)
 }
