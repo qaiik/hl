@@ -80,3 +80,24 @@ function _gd_ddisplay() {
   })
   console.log(ss)
 }
+
+class HL_KeyboardEvent {
+  constructor() {
+    this.type = "KeyboardEvent"
+  }
+}
+
+function _$keHandler(a) {
+  a.init()
+  window.addEventListener("keyup", a.up)
+  window.addEventListener("keydown", a.down)
+}
+
+const _$ehandlerFunctions = {
+  KeyboardEvent: _$keHandler
+}
+
+function _registerEvent(e) {
+  e = new e
+  _$ehandlerFunctions[e.type](e)
+}
